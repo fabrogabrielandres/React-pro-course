@@ -1,30 +1,23 @@
 import { lazy } from "react";
 import { Routes } from "./Navigation";
+import Nolazy from "../01-lazyload/pages/Nolazy";
 
 
-const Lazy1 = lazy(() => import(/* webpackChunkName:"page1aaaaa" */ '../01-lazyload/pages/Lazypage1'));
-const Lazy2 = lazy(() => import(/* webpackChunkName:"page2aaaaa" */ '../01-lazyload/pages/Lazypage2'));
-const Lazy3 = lazy(() => import(/* webpackChunkName:"page3aaaaa" */ '../01-lazyload/pages/Lazypage3'));
+const LazyLayout = lazy(() => import(/* webpackChunkName:"page1aaaaa" */ '../01-lazyload/layout/LazyLayout'));
 
 export const routes: Array<Routes> = [
     {
-        Component:Lazy1,
-        name:"Lazypage1",
-        path:"lazypage1",
-        to:"lazypage1",
+        path:"/lazyload/*",
+        to:"/lazyload/",
+        Component:LazyLayout,
+        name:"/Lazyload",
     },
     {
-        Component:Lazy2,
-        name:"Lazypage2",
-        path:"lazypage2",
-        to:"lazypage2",
-    },
-    {
-        Component:Lazy3,
-        name:"Lazypage3",
-        path:"lazypage3",
-        to:"lazypage3",
-    },
+        path:"/no-lazy",
+        to:"no-lazy",
+        Component:Nolazy,
+        name:"Nolazy",
+    }
 ] 
 
 
