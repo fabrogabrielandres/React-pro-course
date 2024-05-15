@@ -1,30 +1,22 @@
 import { lazy } from "react";
 import { Routes } from "./Navigation";
+import { RegisterPage } from "../forms/pages/RegisterPage";
+import { FormikBasicPage } from "../forms/pages/FormikBasicPage";
 
-
-const Lazy1 = lazy(() => import(/* webpackChunkName:"page1aaaaa" */ '../01-lazyload/pages/Lazypage1'));
-const Lazy2 = lazy(() => import(/* webpackChunkName:"page2aaaaa" */ '../01-lazyload/pages/Lazypage2'));
-const Lazy3 = lazy(() => import(/* webpackChunkName:"page3aaaaa" */ '../01-lazyload/pages/Lazypage3'));
 
 export const routes: Array<Routes> = [
     {
-        Component:Lazy1,
-        name:"Lazypage1",
-        path:"lazypage1",
-        to:"lazypage1",
+        Component:RegisterPage,
+        name:"basic-form",
+        path:"basic-form",
+        to:"basic-form",
     },
     {
-        Component:Lazy2,
-        name:"Lazypage2",
-        path:"lazypage2",
-        to:"lazypage2",
-    },
-    {
-        Component:Lazy3,
-        name:"Lazypage3",
-        path:"lazypage3",
-        to:"lazypage3",
-    },
+        Component:FormikBasicPage,
+        name:"FormikBasicPage",
+        path:"FormikBasicPage",
+        to:"FormikBasicPage",
+    }
 ] 
 
 
