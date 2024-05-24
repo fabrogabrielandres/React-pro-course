@@ -1,7 +1,5 @@
-import { lazy } from "react";
 import { Routes } from "./Navigation";
-import { RegisterPage } from "../forms/pages/RegisterPage";
-import { FormikBasicPage } from "../forms/pages/FormikBasicPage";
+import { RegisterPage , FormikAbstraction, FormikBasicPage, FormikComponent, FormikYupPage } from "../forms/pages";
 
 
 export const routes: Array<Routes> = [
@@ -16,7 +14,25 @@ export const routes: Array<Routes> = [
         name:"FormikBasicPage",
         path:"FormikBasicPage",
         to:"FormikBasicPage",
-    }
+    },
+    {
+        Component:FormikYupPage,
+        name:"FormikYupPage",
+        path:"FormikYupPage",
+        to:"FormikYupPage",
+    },
+    {
+        Component:FormikComponent,
+        name:"FormikComponent",
+        path:"FormikComponent",
+        to:"FormikComponent",
+    },
+    {
+        Component:FormikAbstraction,
+        name:"FormikAbstraction",
+        path:"FormikAbstraction",
+        to:"FormikAbstraction",
+    },
 ] 
 
 
