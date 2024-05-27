@@ -1,0 +1,62 @@
+[
+  {
+    "type": "input",
+    "name": "firstName",
+    "placeholder": "Name",
+    "label": "name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "name": "lastName",
+    "placeholder": "lastName",
+    "label": "lastName",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "gabi@gmail.com  ",
+    "label": "email",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "email"
+      }
+    ]
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "placeholder": "",
+    "label": "favoriteGame",
+    "value": "",
+    "options": [
+      { "id": "1", "label": "Mario Kart" },
+      { "id": "2", "label": "League Of leguend" },
+      { "id": "3", "label": "Fifa 2024" }
+    ],
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
+  }
+]
