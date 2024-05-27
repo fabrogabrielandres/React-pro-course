@@ -1,5 +1,6 @@
 import { Routes } from "./Navigation";
 import { RegisterPage , FormikAbstraction, FormikBasicPage, FormikComponent, FormikYupPage } from "../forms/pages";
+import { RegisterFormikPage } from "../forms/pages/RegisterFormikPage";
 
 
 export const routes: Array<Routes> = [
@@ -32,6 +33,12 @@ export const routes: Array<Routes> = [
         name:"FormikAbstraction",
         path:"FormikAbstraction",
         to:"FormikAbstraction",
+    },
+    {
+        Component:RegisterFormikPage,
+        name:"RegisterFormikPage",
+        path:"RegisterFormikPage",
+        to:"RegisterFormikPage",
     },
 ] 
 
